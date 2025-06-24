@@ -1,0 +1,28 @@
+# feeds.yaml
+#
+# This file defines all available feeds for the webhook2rss service.
+# Each top-level key corresponds to a `feed_id`, which maps to a specific parser
+# function (e.g., `parse_radarr` in parsers.py) and identifies the feed in webhook URLs.
+#
+# Structure:
+# <feed_id>:
+#   name:        (Required) A human-readable name for the feed.
+#   description: (Required) A short description of what the feed does.
+#   icon_url:    (Optional) A URL to a favicon or icon representing the feed.
+#   url:         (Optional) A related link, shown in the RSS feed metadata.
+#   token:       (Optional) A secret token required to authenticate incoming webhook POSTs.
+#
+# Example:
+# radarr:
+#   name: "Radarr Activity"
+#   description: "Radarr app import feed"
+#   icon_url: "http://docker.ajghs.com:7878/favicon.ico"
+#   url: "http://docker.ajghs.com:7878"
+#   token: snhnmxvvsqkygtfhgdvf
+#
+# Notes:
+# - The `feed_id` must match a corresponding parser function like `parse_<feed_id>` in parsers.py.
+# - Tokens are optional but recommended for securing incoming webhooks.
+# - This file must be valid YAML. Strings containing special characters or colons should be quoted.
+
+

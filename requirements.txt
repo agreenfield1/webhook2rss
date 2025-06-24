@@ -1,0 +1,6 @@
+requests
+argcomplete
+gunicorn
+flask
+feedgen
+PyYAML
