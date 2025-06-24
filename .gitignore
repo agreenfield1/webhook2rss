@@ -10,7 +10,8 @@ __pycache__/
 *.local
 
 # Ignore node_modules (for Node.js projects)
-data/
+data/*
+!data/
 test/
 
 # Ignore OS/system files
