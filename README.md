@@ -98,27 +98,15 @@ https://feeds.example.com/radarr.atom
 
 ---
 
-## 🧪 Development
-
-To run the app locally:
-
-```bash
-export FLASK_ENV=development
-export WEBHOOK2RSS_PORT=8855
-python3 webhook2rss.py
-```
-
----
-
 ## 📁 Folder Structure
 
 ```
 /app
   ├── webhook2rss.py       # Main Flask app
-  ├── entrypoint.sh        # Docker entrypoint
-  └── default_feeds.yaml   # Default config
+  └── entrypoint.sh        # Docker entrypoint
 /data
   ├── feeds.yaml           # User-defined feeds
+  ├── events.db           # sqlite database
   └── parsers.py           # User-defined parser functions
 ```
 
