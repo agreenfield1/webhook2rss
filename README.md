@@ -134,13 +134,35 @@ python3 webhook2rss.py
 | `WEBHOOK2RSS_PARSERS`   | Path to `parsers.py`                    | `/data/parsers.py`       |
 
 ---
+---
 
-## 📝 License
+## 🩺 Diagnostic Endpoints
 
-MIT License — do what you want, but give credit where due.
+The app provides several built-in endpoints to help with debugging, health monitoring, and inspecting stored feed data.
 
 ---
 
-## 💬 Questions?
+### 📘 `/feeds`
 
-Open an issue or email [your email/contact info].
+Returns metadata for all defined feeds from `feeds.yaml`.
+
+---
+
+### 📗 `/feeds/<feed_id>`
+
+Returns all stored events for the specified feed.
+
+---
+
+### 📙 `/diagnostics`
+
+Returns system-level debug information
+
+---
+
+### ✅ `/healthz`
+
+A simple health check endpoint for Docker, Kubernetes, or uptime monitoring tools.
+
+---
+
